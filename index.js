@@ -10,6 +10,10 @@ app.use(cors)
 app.use(bodyParser.json());
 
 // Nodemailer configuration for SMTP
+
+app.get('/',(req,res)=>{
+    res.send({msg:"Hello World"});
+})
 const transporter = nodemailer.createTransport({
  service:"gmail",
   auth: {
